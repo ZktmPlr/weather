@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background: rgb(26, 26, 26);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 50px;
+            padding: 50px;
+        }
+        .doggos{
+            
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            flex-direction:column;
+            gap:50px;
+            padding:50px;
+            border:10px solid black;
+            
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="dogs-container"></div>
+
+    <script>
+        async function dogss() {
+            const response = await fetch("https://dog.ceo/api/breeds/image/random/50");
+            const dog = await response.json();
+            console.log(dog.message);
+
+            const dogsContainer = document.getElementById("dogs-container");
+
+            for (let i = 0; i < dog.message.length; i++) {
+                const myImage = new Image(650, 450);
+                myImage.src = dog.message[i];
+                myImage.classList.add("doggos"); // Add a class for styling
+                
+                dogsContainer.appendChild(myImage);
+            }
+        }
+
+        dogss();
+    </script>
+</body>
+</html>

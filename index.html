@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&family=Oswald&display=swap');
+        body{
+            
+            background: rgb(161,92,246);
+background: radial-gradient(circle, rgba(161,92,246,1) 0%, rgba(178,85,244,1) 25%, rgba(153,44,231,1) 48%, rgba(146,69,218,1) 69%, rgba(148,64,196,1) 91%, rgba(131,76,186,1) 100%);
+            margin:0;
+            display:flex;
+            height:100vh;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            gap:50px;
+        }
+        container{
+            border-radius:50px;
+            height:30vh;
+            width:35vw;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            text-align:center;
+            font-size:25px;
+background:rgba(0,0,0,.1);
+            background-image:url("night.png");
+            border:10px solid rgb(52, 36, 95);
+        }
+        .weather_icon{
+            border:0;
+height:100px;
+width:100px;
+display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+        }
+        .weather_text{
+            border:0;
+            font-size:25px;
+            font-weight:800;
+font-family:Oswald;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+
+
+        }
+        size{
+            border:0;
+            font-size:90px;
+            font-weight:800;
+font-family:Kanit;
+        }
+        .miasto{
+            
+            background:white;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <size>Gen Alpha Weather App</size>
+    <container>
+    <img class="weather_icon"></div>
+    
+    <input class="miasto" placeholder="wybierz miasto">
+    <button id="y">Submit</button>
+
+
+    <div class="weather_text"></div>
+</container>
+<script src="weather.js"></script>
+</body>
+</html>
